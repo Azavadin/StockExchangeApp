@@ -4,8 +4,8 @@ import {CompaniesInfo} from './CompaniesInfo';
   selector: 'stock-detail',
   template: `
   <div *ngIf = "detailRequested">
-<b>Name</b> : {{detailRequested.name}}
-  <b>TotalSharesInTheCompany</b> : {{detailRequested.TotalSharesInTheCompany}}
+<b>Name</b> : <h3>{{detailRequested.name}}</h3>
+  <b>TotalSharesInTheCompany</b> : <h3>{{detailRequested.TotalSharesInTheCompany}}</h3>
  <b>ShareValue</b> : <h3>{{detailRequested.shareValue}}</h3>
   <b>SharesInDemand</b> : <h3>{{detailRequested.sharesInDemand}}</h3>
   <b>SharesReadyForSupply</b> : <h3>{{detailRequested.sharesReadyForSupply}}</h3>

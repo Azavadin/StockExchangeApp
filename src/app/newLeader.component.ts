@@ -3,17 +3,24 @@ import { CompaniesInfo } from './companiesInfo';
 @Component({
   selector: 'new-leader',
   template: `
-  <div *ngIf = "detRequested">
-  Name : <h4>{{detRequested.name}}</h4>
-TotalSharesInTheCompany : <h4>{{detRequested.TotalSharesInTheCompany}}</h4>
- ShareValue :<h4>{{detRequested.shareValue}}</h4>
-SharesInDemand : <h4>{{detRequested.sharesInDemand}}</h4>
-SharesReadyForSupply : <h4>{{detRequested.sharesReadyForSupply}}</h4>
-</div>
- 
+  <div *ngIf = "leaderArray">
+  <h2>HOT STOCK</h2>
+<b>Name</b> : {{leaderArray[0].name}}
+  <b>TotalSharesInTheCompany</b> : {{leaderArray[0].TotalSharesInTheCompany}}
+ <b>ShareValue</b> : <h3>{{leaderArray[0].shareValue}}</h3>
+  <b>SharesInDemand</b> : <h3>{{leaderArray[0].sharesInDemand}}</h3>
+  <b>SharesReadyForSupply</b> : <h3>{{leaderArray[0].sharesReadyForSupply}}</h3>
+  <h2>BEARISH STOCK</h2>
+  <b>Name</b> : {{leaderArray[1].name}}
+  <b>TotalSharesInTheCompany</b> : {{leaderArray[1].TotalSharesInTheCompany}}
+ <b>ShareValue</b> : <h3>{{leaderArray[1].shareValue}}</h3>
+  <b>SharesInDemand</b> : <h3>{{leaderArray[1].sharesInDemand}}</h3>
+  <b>SharesReadyForSupply</b> : <h3>{{leaderArray[1].sharesReadyForSupply}}</h3>
+
+ </div>
   `,
 })
 export class NewLeaderComponent  {
-@Input()  detRequested: CompaniesInfo;
+@Input()  leaderArray: CompaniesInfo[];
 }
 

@@ -17,20 +17,18 @@ export class StockService {
 TotalSharesInTheCompany: 0,
 shareValue: 0,
 sharesInDemand: 0,
-sharesReadyForSupply: 0}
+sharesReadyForSupply: 0};
   }
 
-  getLeader(): CompaniesInfo {
-      var max = -1;
-      var indx = -1;
+  getCompanyIndex(name: string): number {
+      this.index = -1;
       for (var i=0; i<DATA.length; i++){
-          if(DATA[i].shareValue > max){
-             max = DATA[i].shareValue;
-             indx = i;
+          if(DATA[i].name == name){
+              this.index = i;
           }
-              
-
      }
-return DATA[i];
+     return this.index;
   }
+
+  
 }

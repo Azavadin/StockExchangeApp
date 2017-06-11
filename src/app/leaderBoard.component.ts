@@ -6,16 +6,18 @@ import { LeaderService } from './leader.service';
   selector: 'my-leader',
   template: `<h2>Leader Board</h2>
   <button (click) = "onClick()">CLICK</button>
+  
   <div>
-  <new-leader [detRequested] = "detailedRequested"></new-leader>
+  <new-leader [leaderArray] = "leadersArray"></new-leader>
  </div>
  `,
+ styleUrls: [ './leaderBoard.component.css' ]
 })
 export class LeaderBoardComponent  {
-    detailedRequested: CompaniesInfo;
-    constructor(private leaderService: LeaderService) { }
+    leadersArray: CompaniesInfo[];
+    constructor(private leaderService: LeaderService, private stockService: StockService) { }
 onClick(){
-   this.detailedRequested = this.leaderService.getLeader();
+   this.leadersArray = this.leaderService.getLeaders();
 }
 }
 
