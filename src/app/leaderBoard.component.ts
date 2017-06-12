@@ -8,16 +8,21 @@ import { LeaderService } from './leader.service';
   <button (click) = "onClick()">CLICK</button>
   
   <div>
-  <new-leader [leaderArray] = "leadersArray"></new-leader>
+  <top-leader [topper] = "topLeader" ></top-leader>
+ </div>
+ <div>
+  <last-leader [last] = "lastLeader" ></last-leader>
  </div>
  `,
  styleUrls: [ './leaderBoard.component.css' ]
 })
 export class LeaderBoardComponent  {
-    leadersArray: CompaniesInfo[];
-    constructor(private leaderService: LeaderService, private stockService: StockService) { }
+    topLeader: CompaniesInfo;
+    lastLeader: CompaniesInfo;
+    constructor(private leaderService: LeaderService) { }
 onClick(){
-   this.leadersArray = this.leaderService.getLeaders();
+   this.topLeader = this.leaderService.getTopLeader();
+   this.lastLeader = this.leaderService.getLastLeader();
 }
 }
 
