@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { StockService } from './stock.service';
-import { CompaniesInfo } from './companiesInfo';
-import { LeaderService } from './leader.service';
+import { StockService } from '../services/stock.service';
+import { CompaniesInfo } from '../data/companiesInfo';
+import { LeaderService } from '../services/leader.service';
 @Component({
   selector: 'my-leader',
   template: `<h2>Leader Board</h2>

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { StockService } from './stock.service';
-import { CompaniesInfo } from './companiesInfo';
-import { DATA } from './companiesData';
+import { StockService } from '../services/stock.service';
+import { CompaniesInfo } from '../data/companiesInfo';
+import { DATA } from '../data/companiesData';
 @Component({
   selector: 'my-display',
   template: `

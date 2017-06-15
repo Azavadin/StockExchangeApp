@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CompaniesInfo } from './companiesInfo';
-import { DATA } from './companiesData';
+import { CompaniesInfo } from '../data/companiesInfo';
+import { DATA } from '../data/companiesData';
 @Injectable()
 export class LeaderService {
          max: number = -1;

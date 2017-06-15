@@ -1,17 +1,17 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent }  from './app.component';
-import {CompaniesInfo} from './CompaniesInfo';
-import { StockService } from './stock.service';
-import { StockDetail } from './stockDetail.component';
+import { AppComponent }  from '../components/app.component';
+import {CompaniesInfo} from '../data/CompaniesInfo';
+import { StockService } from '../services/stock.service';
+import { StockDetail } from '../components/stockDetail.component';
 import { RouterModule } from '@angular/router';
-import { DisplayComponent }  from './display.component';
-import { LeaderBoardComponent }  from './leaderBoard.component';
-import { TechnicalAnalysisComponent }  from './technicalAnalysis.component';
-import { LeaderService } from './leader.service';
-import { topLeaderDisplayComponent } from './topLeaderDisplay.component';
-import { lastLeaderDisplayComponent } from './lastLeaderDisplay.component'
+import { DisplayComponent }  from '../components/display.component';
+import { LeaderBoardComponent }  from '../components/leaderBoard.component';
+import { TechnicalAnalysisComponent }  from '../components/technicalAnalysis.component';
+import { LeaderService } from '../services/leader.service';
+import { topLeaderDisplayComponent } from '../components/topLeaderDisplay.component';
+import { lastLeaderDisplayComponent } from '../components/lastLeaderDisplay.component'
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
   RouterModule.forRoot([{path: 'display', component: DisplayComponent},

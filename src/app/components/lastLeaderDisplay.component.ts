@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CompaniesInfo } from './companiesInfo';
+import { CompaniesInfo } from '../data/companiesInfo';
 @Component({
   selector: 'last-leader',
   template: `

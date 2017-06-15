@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {CompaniesInfo} from './CompaniesInfo';
+import {CompaniesInfo} from '../data/CompaniesInfo';
 @Component({
   selector: 'stock-detail',
   template: `
