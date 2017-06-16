@@ -1,5 +1,5 @@
 
-export class CompaniesInfo{
+export class Company{
 name: string;
 TotalSharesInTheCompany: number;
 shareValue: number;

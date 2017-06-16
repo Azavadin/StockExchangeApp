@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { CompaniesInfo } from '../data/companiesInfo';
-import { DATA } from '../data/companiesData';
+import { Company } from '../data/company';
+import { DATA } from '../data/companiesDataArray';
 @Injectable()
-export class StockService {
+export class StockDetailsService {
     index: number = -1;
-  getCompanyInformation(name: string): CompaniesInfo {
+  getCompanyInformation(name: string): Company {
       for (var i=0; i<DATA.length; i++){
           if(DATA[i].name == name){
               this.index = i;

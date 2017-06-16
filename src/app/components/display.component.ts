@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { StockService } from '../services/stock.service';
-import { CompaniesInfo } from '../data/companiesInfo';
-import { DATA } from '../data/companiesData';
+import { StockDetailsService } from '../services/stockDetails.service';
+import { Company } from '../data/company';
+import { DATA } from '../data/companiesDataArray';
 @Component({
   selector: 'my-display',
   template: `
@@ -16,23 +16,23 @@ import { DATA } from '../data/companiesData';
 })
 export class DisplayComponent  {
   title = 'BOMBAY';
-  detailsRequested: CompaniesInfo;
+  detailsRequested: Company;
   flag: number;
   index: number;
-  constructor(private stockService: StockService) { }
+  constructor(private stockService: StockDetailsService) { }
 onClick(name: string){
    this.detailsRequested = this.stockService.getCompanyInformation(name);
 }
 onDemand(name: string){
 this.index = this.stockService.getCompanyIndex(name);
-if(this.index !=1 ){
+if(this.index != -1 ){
   DATA[this.index].sharesInDemand =  DATA[this.index].sharesInDemand+1;
   DATA[this.index].shareValue =  DATA[this.index].shareValue+2.575;
 }
 }
 onSupply(name: string){
 this.index = this.stockService.getCompanyIndex(name);
-if(this.index !=1 ){
+if(this.index != -1 ){
 DATA[this.index].sharesReadyForSupply =  DATA[this.index].sharesReadyForSupply+1;
 DATA[this.index].shareValue =  DATA[this.index].shareValue-1.575;
 

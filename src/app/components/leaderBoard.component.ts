@@ -1,28 +1,27 @@
 import { Component, Input } from '@angular/core';
-import { StockService } from '../services/stock.service';
-import { CompaniesInfo } from '../data/companiesInfo';
-import { LeaderService } from '../services/leader.service';
+import { StockDetailsService } from '../services/stockDEtails.service';
+import { Company } from '../data/company';
+import { LeaderBoardDetailsService } from '../services/leaderBoardDetails.service';
 @Component({
   selector: 'my-leader',
   template: `<h2>Leader Board</h2>
   <button (click) = "onClick()">CLICK</button>
-  
   <div>
-  <top-leader [topper] = "topLeader" ></top-leader>
+    <top-leader [topper] = "topLeader" ></top-leader>
  </div>
  <div>
-  <last-leader [last] = "lastLeader" ></last-leader>
+    <last-leader [last] = "lastLeader" ></last-leader>
  </div>
  `,
- styleUrls: [ './leaderBoard.component.css' ]
+    styleUrls: [ './leaderBoard.component.css' ]
 })
 export class LeaderBoardComponent  {
-    topLeader: CompaniesInfo;
-    lastLeader: CompaniesInfo;
-    constructor(private leaderService: LeaderService) { }
+    topLeader: Company;
+    lastLeader: Company;
+    constructor(private leaderBoardDetailsService: LeaderBoardDetailsService) { }
 onClick(){
-   this.topLeader = this.leaderService.getTopLeader();
-   this.lastLeader = this.leaderService.getLastLeader();
+   this.topLeader = this.leaderBoardDetailsService.getTopLeader();
+   this.lastLeader = this.leaderBoardDetailsService.getLastLeader();
 }
 }
 

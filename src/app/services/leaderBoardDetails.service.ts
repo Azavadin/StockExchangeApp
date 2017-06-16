@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { CompaniesInfo } from '../data/companiesInfo';
-import { DATA } from '../data/companiesData';
+import { Company } from '../data/company';
+import { DATA } from '../data/companiesDataArray';
 @Injectable()
-export class LeaderService {
+export class LeaderBoardDetailsService {
          max: number = -1;
       maxIndex: number = -1;
       min: number = 1000000;
       minIndex: number = -1
 
-getTopLeader(): CompaniesInfo {
+getTopLeader(): Company {
 
       for (var i=0; i<DATA.length; i++){
           if(DATA[i].shareValue > this.max){
@@ -19,7 +19,7 @@ getTopLeader(): CompaniesInfo {
 return DATA[this.maxIndex];
   }
 
-  getLastLeader(): CompaniesInfo{
+  getLastLeader(): Company{
     for (var i=0; i<DATA.length; i++){
        if(DATA[i].shareValue < this.min){
              this.min = DATA[i].shareValue;
