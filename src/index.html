@@ -5,7 +5,7 @@
     <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -20,6 +20,74 @@
   </head>
 
   <body>
-    <my-app>Loading AppComponent content here ...</my-app>
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-md-4">
+                <div id = "imageCarousel" class = "carousel slide" data-interval = "2000" data-ride = "carousel">
+                  <div class = "carousel-inner">
+                    <div class = "item active">
+                      <img src = "Images/modi.jpg"  class = "img-responsive" />
+                      <div class = "carousel-caption">
+                        <p>Indian Prime Minister</p>
+                        </div>
+                        </div>
+                        
+                        <div class = "item">
+                      <img src = "Images/ratan.jpg"  class = "img-responsive" />
+                      <div class = "carousel-caption">
+                        <p>Indian Prime Minister</p>
+                        </div>
+                        </div>
+                        
+                      <div class = "item">
+                      <img src = "Images/lakshmi.jpg"  class = "img-responsive" />
+                      <div class = "carousel-caption">
+                        <p>Indian Prime Minister</p>
+                        </div>
+                        </div>
+                        
+                       <div class = "item active">
+                      <img src = "Images/mukesh.jpg"  class = "img-responsive" />
+                      <div class = "carousel-caption">
+                        <p>Indian Prime Minister</p>
+                        </div>
+                        </div>
+                        
+
+                        </div>
+                        <a href = "#imageCarousel" class = "carousel-control left" data-slide = "prev">
+                              <span class = "glyphicon glyphicon-chevron-left"></span>
+                        </a>
+
+                        <a href = "#imageCarousel" class = "carousel-control right" data-slide = "next">
+                              <span class = "glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                        </div>
+        </div>
+                            <div class = "col-md-6"><my-app class = "text-primary">Loading AppComponent content here ...</my-app></div>
+                            <div class = "col-md-2">RightSide Bar</div>
+                            </div>
+                            </div>
+
+    <div class = "container">
+      <div class = "progress">
+      <div class = "progress-bar progress-bar-success progress-bar-striped active" style = "width:90%; min-width:20px">GOOGLE</div>
+      </div>
+      <div class = "progress">
+      <div class = "progress-bar progress-bar-info progress-bar-striped active" style = "width:70%; min-width:20px">MICROSOFT</div>
+      </div>
+      <div class = "progress">
+      <div class = "progress-bar progress-bar-warning progress-bar-striped active" style = "width:60%; min-width:20px">AMAZON</div>
+      </div>
+      <div class = "progress">
+      <div class = "progress-bar progress-bar-danger progress-bar-striped active" style = "width:85%; min-width:20px">FACEBOOK</div>
+      </div>
+
+
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

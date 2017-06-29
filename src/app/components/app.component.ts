@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   template: `<h2>{{title}} STOCK EXCHANGE</h2>
   <input  [(ngModel)] = "title" placeholder = "Customize the name">
   <nav>
-  <button routerLink = "/display">SEARCH FOR YOUR FAVOURITE STOCK</button>
+  <button routerLink = "/display">SEARCH A STOCK</button>
   <button routerLink = "/board">LEADER BOARD</button>
   <button routerLink = "/analysis">TECHNICAL ANALYSIS</button>
   </nav>

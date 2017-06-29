@@ -12,8 +12,9 @@ import { TechnicalAnalysisComponent }  from '../components/technicalAnalysis.com
 import { LeaderBoardDetailsService } from '../services/leaderBoardDetails.service';
 import { topLeaderDisplayComponent } from '../components/topLeaderDisplay.component';
 import { lastLeaderDisplayComponent } from '../components/lastLeaderDisplay.component'
+import { HttpModule } from '@angular/http';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,
+  imports:      [ BrowserModule, FormsModule, HttpModule, 
   RouterModule.forRoot([{path: 'display', component: DisplayComponent},
   {path: 'board', component: LeaderBoardComponent},
   {path: 'analysis', component: TechnicalAnalysisComponent}])

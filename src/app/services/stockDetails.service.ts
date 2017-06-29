@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Company } from '../data/company';
 import { DATA } from '../data/companiesDataArray';
+import { Http, Response } from '@angular/http';
 @Injectable()
 export class StockDetailsService {
     index: number = -1;
+    constructor(private _http: Http){}
   getCompanyInformation(name: string): Company {
       for (var i=0; i<DATA.length; i++){
           if(DATA[i].name == name){
@@ -26,7 +28,7 @@ sharesReadyForSupply: 0};
           if(DATA[i].name == name){
               this.index = i;
           }
-     }
+     } 
      return this.index;
   }
 
