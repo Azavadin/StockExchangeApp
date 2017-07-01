@@ -7,38 +7,28 @@ import { DATA } from '../data/companiesDataArray';
   template: `
   <input  type = "text" #ticker>
   <button (click) = "onClick(ticker.value)">SEARCH</button>
-  <div>
-<stock-detail [detailRequested] = "detailsRequested"></stock-detail>
-<button (click) = "onDemand(ticker.value)">BUY</button>
-<button (click) = "onSupply(ticker.value)">SELL</button>
-  </div>
+  <p>DATE: {{date}}</p>
+  <p>SPAN: {{milliSeconds}}</p>
+  <p>TIME: {{time}}</p>
   `,
 })
 export class DisplayComponent  {
   title = 'BOMBAY';
-  detailsRequested: Company;
-  flag: number;
-  index: number;
+  date = '';
+  milliSeconds = '';
+  time = '';
   constructor(private stockService: StockDetailsService) { }
 onClick(name: string){
-   this.detailsRequested = this.stockService.getCompanyInformation(name);
-}
-onDemand(name: string){
-this.index = this.stockService.getCompanyIndex(name);
-if(this.index != -1 ){
-  DATA[this.index].sharesInDemand =  DATA[this.index].sharesInDemand+1;
-  DATA[this.index].shareValue =  DATA[this.index].shareValue+2.575;
-}
-}
-onSupply(name: string){
-this.index = this.stockService.getCompanyIndex(name);
-if(this.index != -1 ){
-DATA[this.index].sharesReadyForSupply =  DATA[this.index].sharesReadyForSupply+1;
-DATA[this.index].shareValue =  DATA[this.index].shareValue-1.575;
-
+   this.stockService.getCompanyInformation(name).subscribe(
+     resData => {const data = resData;
+       console.log(data);
+       this.date = data.date;
+       this.milliSeconds = data.milliseconds_since_epoch;
+       this.time = data.time;
+     }
+   );
 }
 
-}
 
 
 }
