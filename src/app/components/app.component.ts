@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   <input  [(ngModel)] = "title" placeholder = "Customize the name">
   <nav>
   <button routerLink = "/display">SEARCH A STOCK</button>
-  <button routerLink = "/board">LEADER BOARD</button>
   <button routerLink = "/analysis">TECHNICAL ANALYSIS</button>
   </nav>
   <router-outlet></router-outlet> 

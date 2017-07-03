@@ -17,6 +17,21 @@
     <script>
       System.import('main.js').catch(function(err){ console.error(err); });
     </script>
+    <style type = "text/css">
+    .blink-me
+    {
+      animation-name: blinker;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes blinker
+    {
+      0%{ opacity: 1.0; color: yellow}
+      50%{ opacity: 0.0; color: yellow}
+      100%{ opacity: 1.0; color: yellow}
+    }
+    </style>
   </head>
 
   <body>
@@ -64,8 +79,14 @@
                         </a>
                         </div>
         </div>
-                            <div class = "col-md-6"><my-app class = "text-primary">Loading AppComponent content here ...</my-app></div>
-                            <div class = "col-md-2">RightSide Bar</div>
+                            <div class = "col-md-6"><my-app class = "text-primary" class = "btn">Loading AppComponent content here ...</my-app></div>
+                            <div class = "col-md-2" ><h1 class = "blink-me" class="textstyle">Companies ready for IPO shortly</h1>
+                            <p>1. Agile Learner</p>
+                            <p>2. Micro Focus</p>
+                            <p>3. Smaya</p>
+                            <p>4. Smarak</p>
+                            <p>5. Krishnapatnam Port</p>
+                            </div>
                             </div>
                             </div>
 
