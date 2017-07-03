@@ -6,7 +6,6 @@ import { StockDetailsService } from '../services/stockDetails.service';
 import { RouterModule } from '@angular/router';
 import { DisplayComponent }  from '../components/display.component';
 import { TechnicalAnalysisComponent }  from '../components/technicalAnalysis.component';
-import { LeaderBoardDetailsService } from '../services/leaderBoardDetails.service';
 import { HttpModule } from '@angular/http';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, 
@@ -15,6 +14,6 @@ import { HttpModule } from '@angular/http';
    ],
   declarations: [ AppComponent, DisplayComponent, TechnicalAnalysisComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [StockDetailsService, LeaderBoardDetailsService]
+  providers: [StockDetailsService]
 })
 export class AppModule { }
