@@ -8,15 +8,17 @@ import { StockDetailsDisplayComponent }  from '../components/stock/stockDetailsD
 import { TechnicalAnalysisComponent }  from '../components/technicalAnalysis/technicalAnalysis.component';
 import { CompareStocksComponent } from '../components/comparison/compareStocks.component';
 import { CompareStocksService } from '../components/comparison/compareStocks.service';
+import { ArithmeticOperationsComponent } from '../components/calc/arithmeticoperations.component';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule,
   RouterModule.forRoot([{path: 'display', component: StockDetailsDisplayComponent},
   {path: 'analysis', component: TechnicalAnalysisComponent},
-  {path: 'compare', component: CompareStocksComponent}])
+  {path: 'compare', component: CompareStocksComponent},
+  {path: 'arithmetic', component: ArithmeticOperationsComponent}])
    ],
-  declarations: [ AppComponent, StockDetailsDisplayComponent, TechnicalAnalysisComponent, CompareStocksComponent],
+  declarations: [ AppComponent, StockDetailsDisplayComponent, TechnicalAnalysisComponent, CompareStocksComponent, ArithmeticOperationsComponent],
   bootstrap:    [ AppComponent ],
   providers: [StockDetailsService, CompareStocksService]
 })
