@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
 })
 export class ArithmeticOperationsComponent  {
   result: number;
-onClick(num1: number, num2: number, num3: number){
-this.result = num1+num2-num3;
+onClick(num1: string, num2: string, num3: string){
+this.result = parseInt(num1) + parseInt(num2)-parseInt(num3);
 }  
 }
 
