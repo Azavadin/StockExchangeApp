@@ -1,19 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { StockDetailsService } from '../services/stockDetails.service';
+import { StockDetailsService } from './stockDetails.service';
 @Component({
   selector: 'my-display',
-  template: `
-  <input  type = "text" #ticker>
-  <button (click) = "onClick(ticker.value)">SEARCH</button>
-  <p>OPEN: {{open}}</p>
-  <p>HIGH: {{high}}</p>
-  <p>LOW: {{low}}</p>
-  <p>CLOSE: {{close}}</p>
-  <p>VOLUME: {{volume}}</p>
-  `,
+  templateUrl: "./stockDetailsDisplay.component.html"
 
 })
-export class DisplayComponent  {
+export class StockDetailsDisplayComponent  {
   title = 'BOMBAY';
   open = '';
   high = '';
@@ -25,7 +17,7 @@ onClick(name: string){
    this.stockService.getCompanyInformation(name).subscribe(
      resData => {const data = resData;
        const data1 = data["Time Series (Daily)"];
-       const data2 = data1["2017-02-08"];
+       const data2 = data1["2017-02-16"];
        console.log(data);
        console.log(data["Time Series (Daily)"]);
        console.log(data2);
